@@ -35,11 +35,9 @@ const OrderInformation = ({ formData, setFormData }: TOrderInformation) => {
         <div className="flex flex-col gap-2">
           <label htmlFor="customerContact" className="font-semibold text-gray-700">Whatsapp Number</label>
           <input
-            type="text"
-            placeholder="Type your whatsapp number"
             id="customerContact"
             name="customerContact"
-            value={formData.customerContact ?? ""}
+            value={String(formData.customerContact ?? "")}
             onChange={handleInputChange}
             className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
           />
